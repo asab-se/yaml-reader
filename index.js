@@ -7,6 +7,6 @@
 /**
  * The entry point.
  *
- * @module Yamanager
+ * @module node-simple-yaml
  */
-module.exports = require('./lib/yamanager');
+module.exports = require('./lib/node-simple-yaml');
