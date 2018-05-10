@@ -1,5 +1,5 @@
 {
-  "name": "node-simple-yaml",
+  "name": "yaml-reader",
   "version": "0.1.0",
   "description": "A wrapper for js-yaml to easily retrieve a yml without needing to define fs read etc.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asab-se/node-simple-yaml"
+    "url": "git+https://github.com/asab-se/yaml-reader"
   },
   "keywords": [
     "nodejs",
@@ -17,9 +17,9 @@
   "author": "Alex Sabau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/asab-se/node-simple-yaml/issues"
+    "url": "https://github.com/asab-se/yaml-reader/issues"
   },
-  "homepage": "https://github.com/asab-se/node-simple-yaml#readme",
+  "homepage": "https://github.com/asab-se/yaml-reader#readme",
   "dependencies": {
     "js-yaml": "^3.11.0"
   },
