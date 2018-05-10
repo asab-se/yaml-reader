@@ -1,7 +1,7 @@
 {
   "name": "yaml-reader",
   "version": "0.1.0",
-  "description": "A wrapper for js-yaml to easily retrieve a yml without needing to define fs read etc.",
+  "description": "A wrapper for js-yaml to easily read yml files",
   "main": "index.js",
   "scripts": {
     "test": "set NODE_PATH=. && mocha test/**/*.spec.js"
