@@ -10,7 +10,7 @@ const simpleYaml = require('../../lib/node-simple-yaml');
 
 describe('on valid input', function() {
     it('should return the parsed config file', () => {
-        const config = simpleYaml.parseYaml('test/res/simple-config.yml');
+        const config = simpleYaml.readYaml('test/res/simple-config.yml');
         return expect(config).to.not.be.null;
     });
 });

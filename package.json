@@ -1,6 +1,6 @@
 {
   "name": "node-simple-yaml",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A wrapper for js-yaml to easily retrieve a yml without needing to define fs read etc.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asab-se/yamanager.git"
+    "url": "git+https://github.com/asab-se/node-simple-yaml"
   },
   "keywords": [
     "nodejs",
@@ -17,9 +17,9 @@
   "author": "Alex Sabau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/asab-se/yamanager/issues"
+    "url": "https://github.com/asab-se/node-simple-yaml/issues"
   },
-  "homepage": "https://github.com/asab-se/yamanager#readme",
+  "homepage": "https://github.com/asab-se/node-simple-yaml#readme",
   "dependencies": {
     "js-yaml": "^3.11.0"
   },
