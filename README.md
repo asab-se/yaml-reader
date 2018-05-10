@@ -5,7 +5,7 @@ npm install --save yaml-reader
 ```
 
 
-#h1 Usage
+# Usage
 
 ```
 const config = require('yaml-reader).readYaml('path/to/yml.yml');
