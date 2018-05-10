@@ -9,4 +9,4 @@
  *
  * @module node-simple-yaml
  */
-module.exports = require('./lib/node-simple-yaml');
+module.exports = require('./lib/yamlReader');
