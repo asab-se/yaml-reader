@@ -128,8 +128,12 @@ The config is returned as a _Promise\<Object>.resolve_ if the file was readable 
 
 ```
 const yamlReader = require('yaml-reader');
+const options = { ... }
+//
+// awaiting promises
+//
 
-yamlReader.readAsync('path/to/yml.yml')
+yamlReader.readAsync('path/to/yml.yml', options)
 .then((config) => {
     // access properties of your yaml
     // console.log(config.myProperty)
@@ -137,4 +141,12 @@ yamlReader.readAsync('path/to/yml.yml')
 .catch((err) => {
     // handle errors (like FileNotFoundError)
 })
+
+//
+// or with callback
+//
+
+yamlReader.readAsync('path/to/yml.yml', options, (err, config) => {
+    ...
+}
 ```
