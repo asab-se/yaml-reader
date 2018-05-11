@@ -7,6 +7,10 @@ and its dependencies low.
 The asynchronous read provides promise based and callback based support, thus 
 you can choose the style you like better.
 
+## Notes
+
+yaml-reader is written in ECMA 6 (Node version 8.11.1). Be sure your node version can handle
+this. 
 
 ## Installation
 
