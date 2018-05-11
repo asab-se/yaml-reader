@@ -10,7 +10,7 @@ you can choose the style you like better.
 ## Notes
 
 yaml-reader is written in ECMA 6 (Node version 8.11.1). Be sure your node version can handle
-this. 
+this or use babel for older node versions. No guarantee that everything works fine when using babel.
 
 ## Installation
 
