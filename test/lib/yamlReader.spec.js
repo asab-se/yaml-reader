@@ -104,7 +104,7 @@ describe('on valid input', function () {
         describe('with callback', function() {
             describe('without specified encoding', function() {
                 it('should return the yaml attributes with utf-8 encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {test: 'test'}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {test: 'test'}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
@@ -112,37 +112,37 @@ describe('on valid input', function () {
             });
             describe('with specified encoding', function() {
                 it('should return the yaml attributes with utf-8 encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.UTF_8}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.UTF_8}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
                 });
                 it('should return the yaml attributes with utf-16-le encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.UTF_8}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.UTF_8}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
                 });
                 it('should return the yaml attributes with base64 encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.BASE_64}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.BASE_64}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
                 });
                 it('should return the yaml attributes with binary encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.BINARY}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.BINARY}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
                 });
                 it('should return the yaml attributes with hex encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.HEX}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.HEX}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
                 });
                 it('should return the yaml attributes with latin-1 encoding as a Promise.resolve after asynchronous read', (done) => {
-                    yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.LATIN_1}, (err, data) => {
+                    return yamlReader.readAsync('test/res/simple-config.yml', {encoding: yamlReader.constants.ENCODING.LATIN_1}, (err, data) => {
                         expect(data).to.not.be.null;
                         done();
                     })
