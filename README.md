@@ -60,8 +60,8 @@ yamlReader.readAsync('path/to/yml.yml', options)
 
 ## API
 
-#### yaml.read(file [, options])
-#### yaml.readYaml(file [, options])
+#### yamlReader.read(file [, options])
+#### yamlReader.readYaml(file [, options])
 
 Read a yaml file _synchronously_ .
 
@@ -85,8 +85,8 @@ const config = require('yaml-reader').read('path/to/yml.yml', options);
 
 <hr/>
 
-#### yaml.readAsync(file [, options])
-#### yaml.readYamlAsync(file [, options])
+#### yamlReader.readAsync(file [, options])
+#### yamlReader.readYamlAsync(file [, options])
 
 Read a yaml file _asynchronously_. The yaml attributes will be returned with a Promise.
 
