@@ -37,11 +37,10 @@ const yamlReader = require('yaml-reader');
 
 yamlReader.readAsync('path/to/yml.yml')
 .then((config) => {
-    // access properties of your yaml
-    // console.log(config.myProperty)
+    ...
 })
 .catch((err) => {
-    // handle errors (like FileNotFoundError)
+    ...
 })
 ```
 
@@ -52,10 +51,10 @@ const yamlReader = require('yaml-reader');
 // with callback and without options
 yamlReader.readAsync('path/to/yml.yml', null, (err, config) => {
     if (err) {
-        // ...
+        ...
     }
     else {
-        // console.log(config.myProperties)
+        ...
     }
 })
 ```
