@@ -1,6 +1,6 @@
 {
   "name": "yaml-reader",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A lightweight wrapper for js-yaml to easily read yml files",
   "main": "index.js",
   "scripts": {
