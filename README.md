@@ -22,16 +22,20 @@ npm install --save yaml-reader
 
 ## Usage
 
+#### Synchronous
+
 Read a yaml file synchronously. This is like requiring a json config file via `require()`:
 
 ```
 const config = require('yaml-reader').read('path/to/yml.yml');
 ```
 
+#### Asynchronous
+
 You can also read a yaml asynchronously. The result will be returned as a `Promise` or, if
 a callback function is provided, with a callback.
 
-Promise based:
+##### Promise based:
 ```
 const yamlReader = require('yaml-reader');
 
@@ -44,7 +48,7 @@ yamlReader.readAsync('path/to/yml.yml')
 })
 ```
 
-Callback based:
+##### Callback based:
 ```
 const yamlReader = require('yaml-reader');
 
