@@ -52,7 +52,7 @@ yamlReader.readAsync('path/to/yml.yml')
 ```
 const yamlReader = require('yaml-reader');
 
-// with callback and without options
+// without options, thus null as 2nd arg
 yamlReader.readAsync('path/to/yml.yml', null, (err, config) => {
     if (err) {
         ...
@@ -124,7 +124,8 @@ Read a yaml file _asynchronously_. The yaml attributes will be returned with a P
 - __callback__ _<function | null>_ : An optional callback. If this is null the reader assumes you use Promises instead.
     So take care to use the promise syntax if you do not provide a callback.
 
-The config is returned as a _Promise\<Object>.resolve_ if the file was readable or rejected otherwise.
+The config is either returned as a _Promise\<Object>.resolve_ if the file was readable or rejected otherwise, or with
+the callback if invoked with a callback.
 
 ```
 const yamlReader = require('yaml-reader');
