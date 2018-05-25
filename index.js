@@ -7,6 +7,6 @@
 /**
  * The entry point.
  *
- * @module node-simple-yaml
+ * @module yamlReader
  */
 module.exports = require('./lib/yamlReader');

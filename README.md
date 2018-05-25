@@ -22,7 +22,39 @@ npm install --save yaml-reader
 
 ## Usage
 
-#### Synchronous
+The path to the yaml-file is expected to follow the folder structure from your project root onwards. This means
+lets assume your project structure looks like this:
+```
++-- package.json
++-- README.md
++-- bin
++---- app.js
++-- lib
++---- ...
++-- configs
++---- app-config.yml
+```
+Then in your `app.js` you will **not** use something like `yamlReader.read('../configs/app-config.yml')`. Instead you would
+use `yamlReader.read('configs/app-config.yml')` as the path to the yaml file. So if you for example store your configs in a 
+`resources` folder, looking like:
+```
++-- package.json
++-- README.md
++-- bin
++---- app.js
++-- lib
++---- nodeStuff...
++-- resources
++---- application
++------ app-config.yml
++------ authentication.yml
+```
+
+Then you will access the yaml file with `yamlReader.read('resources/application/app-config.yml)`.
+
+<br/>
+
+#### Synchronous read
 
 Read a yaml file synchronously. This is like requiring a json config file via `require()`:
 
@@ -30,7 +62,9 @@ Read a yaml file synchronously. This is like requiring a json config file via `r
 const config = require('yaml-reader').read('path/to/yml.yml');
 ```
 
-#### Asynchronous
+<br/>
+
+#### Asynchronous read
 
 You can also read a yaml asynchronously. The result will be returned as a `Promise` or, if
 a callback function is provided, with a callback.
