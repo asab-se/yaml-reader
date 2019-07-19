@@ -1,6 +1,6 @@
 {
   "name": "yaml-reader",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "A lightweight wrapper for js-yaml to easily read yml files",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/asab-se/yaml-reader#readme",
   "dependencies": {
-    "js-yaml": "^3.11.0"
+    "js-yaml": "^3.13.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
