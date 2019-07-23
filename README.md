@@ -22,17 +22,19 @@ npm install --save yaml-reader
 
 ## Usage
 
-yaml-reader resolves the path from your project root onwards, e.g. having the following project structure
-you call `yamlReader.read('configs/app-config.yml')` wherever you want to read the yaml file. So this will
-work in bot `bin/app.js` and `lib/some-module-someService.js` in this example.   
+yaml-reader resolves the path from your project root onwards, i.e. lets assume the project structure given below.
+Then you will call `yamlReader.read('configs/app-config.yml')` wherever you want to read the yaml file. Thus the call
+ will look the same in both `bin/app.js` and `some/deep/project/path/someService.js`.   
 ```
 +-- package.json
 +-- README.md
 +-- bin
 +---- app.js
-+-- lib
-+---- some-module
-+------ someService.js
++-- some
++---- deep
++------ project
++-------- path
++---------- someService.js
 +---- ...
 +-- configs
 +---- app-config.yml
@@ -45,7 +47,7 @@ work in bot `bin/app.js` and `lib/some-module-someService.js` in this example.
 Read a yaml file synchronously. This is like requiring a json config file via `require()`:
 
 ```
-const config = require('yaml-reader').read('path/to/yml.yml');
+const config = require('yaml-reader').read('path/from/project/root/to/yml.yml');
 ```
 
 <br/>
@@ -59,7 +61,7 @@ a callback function is provided, with a callback.
 ```
 const yamlReader = require('yaml-reader');
 
-yamlReader.readAsync('path/to/yml.yml')
+yamlReader.readAsync('path/from/project/root/to/yml.yml')
 .then((config) => {
     ...
 })
@@ -73,7 +75,7 @@ yamlReader.readAsync('path/to/yml.yml')
 const yamlReader = require('yaml-reader');
 
 // without options, thus null as 2nd arg
-yamlReader.readAsync('path/to/yml.yml', null, (err, config) => {
+yamlReader.readAsync('path/from/project/root/to/yml.yml', null, (err, config) => {
     if (err) {
         ...
     }
@@ -89,15 +91,15 @@ In all cases you can pass in the encoding of the file with an option object. If 
 const options = {
     encoding: yamlReader.constants.ENCODING.UTF_16_LE
 };
-const config = require('yaml-reader').read('path/to/yml.yml', options);
+const config = require('yaml-reader').read('path/from/project/root/to/yml.yml', options);
 
 // or async
 
-yamlReader.readAsync('path/to/yml.yml', options, (err, config) => {
+yamlReader.readAsync('path/from/project/root/yml.yml', options, (err, config) => {
     ...
 }
 
-yamlReader.readAsync('path/to/yml.yml', options)
+yamlReader.readAsync('path/from/project/root/yml.yml', options)
 .then((config) => {
     ...
 })
@@ -112,13 +114,14 @@ yamlReader.readAsync('path/to/yml.yml', options)
 
 Read a yaml file _synchronously_ .
 
-- __file__ _\<string>_ : The path to the yaml file to read
+- __file__ _\<string>_ : The path to the yaml file to read. Resolves from project root onwards. Read "Usage" section
+ to see how it is resolved if unclear
 - __options__ _<Object | null>_ : Options parsed to the reader
     - __options.encoding__ _<string | null>_: The encoding of the yaml file. Is 'utf-8' by default.
     You can use `yaml-reader.constants.ENCODING` for supported encodings.
 
 ```
-const config = require('yaml-reader').read('path/to/yml.yml');
+const config = require('yaml-reader').read('path/from/project/root/to/yml.yml');
 ```
 
 Or with encoding specified:
@@ -127,7 +130,7 @@ Or with encoding specified:
 const options = {
     encoding: yamlReader.constants.ENCODING.UTF_8
 };
-const config = require('yaml-reader').read('path/to/yml.yml', options);
+const config = require('yaml-reader').read('path/from/project/root/to/yml.yml', options);
 ```
 
 <hr/>
@@ -137,7 +140,8 @@ const config = require('yaml-reader').read('path/to/yml.yml', options);
 
 Read a yaml file _asynchronously_. The yaml attributes will be returned with a Promise.
 
-- __file__ _\<string>_ : The path to the yaml file to read
+- __file__ _\<string>_ : The path to the yaml file to read. Resolves from project root onwards. Read "Usage" section 
+to see how it is resolved if unclear
 - __options__ _<Object | null>_ : Options parsed to the reader
     - __options.encoding__ _<string | null>_: The encoding of the yaml file. Is 'utf-8' by default.
     You can use `yaml-reader.constants.ENCODING` for supported encodings.
@@ -154,7 +158,7 @@ const options = { ... }
 // awaiting promises
 //
 
-yamlReader.readAsync('path/to/yml.yml', options)
+yamlReader.readAsync('path/from/project/root/to/yml.yml', options)
 .then((config) => {
     // access properties of your yaml
     // console.log(config.myProperty)
@@ -167,7 +171,7 @@ yamlReader.readAsync('path/to/yml.yml', options)
 // or with callback
 //
 
-yamlReader.readAsync('path/to/yml.yml', options, (err, config) => {
+yamlReader.readAsync('path/from/project/root/to/yml.yml', options, (err, config) => {
     ...
 }
 ```
