@@ -22,7 +22,7 @@ npm install --save yaml-reader
 
 ## Usage
 
-yaml-reader resolves the path from your project root onwards, i.e. lets assume the project structure given below.
+yaml-reader resolves the path **from your project root onwards**, i.e. lets assume the project structure given below.
 Then you will call `yamlReader.read('configs/app-config.yml')` wherever you want to read the yaml file. Thus the call
  will look the same in both `bin/app.js` and `some/deep/project/path/someService.js`.   
 ```
