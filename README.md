@@ -22,35 +22,21 @@ npm install --save yaml-reader
 
 ## Usage
 
-The path to the yaml-file is expected to follow the folder structure from your project root onwards. This means
-lets assume your project structure looks like this:
+yaml-reader resolves the path from your project root onwards, e.g. having the following project structure
+you call `yamlReader.read('configs/app-config.yml')` wherever you want to read the yaml file. So this will
+work in bot `bin/app.js` and `lib/some-module-someService.js` in this example.   
 ```
 +-- package.json
 +-- README.md
 +-- bin
 +---- app.js
 +-- lib
++---- some-module
++------ someService.js
 +---- ...
 +-- configs
 +---- app-config.yml
 ```
-Then in your `app.js` you will **not** use something like `yamlReader.read('../configs/app-config.yml')`. Instead you would
-use `yamlReader.read('configs/app-config.yml')` as the path to the yaml file. So if you for example store your configs in a 
-`resources` folder, looking like:
-```
-+-- package.json
-+-- README.md
-+-- bin
-+---- app.js
-+-- lib
-+---- nodeStuff...
-+-- resources
-+---- application
-+------ app-config.yml
-+------ authentication.yml
-```
-
-Then you will access the yaml file with `yamlReader.read('resources/application/app-config.yml)`.
 
 <br/>
 
